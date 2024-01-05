@@ -20,6 +20,7 @@ resource "aws_internet_gateway" "internet_gateway" {
 
 # use data source to get all avalablility zones in region
 data "aws_availability_zones" "available_zones" {
+  state = "available"
 }
 
 # create public subnet az1
